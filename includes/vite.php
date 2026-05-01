@@ -8,7 +8,6 @@ function vite_is_dev()
 function vite_assets()
 {
     if (vite_is_dev()) {
-        echo '<!-- VITE LOADED -->';
         $vite_server = trim(file_get_contents(get_template_directory() . '/.hot'));
 
         echo '<script type="module" src="' . $vite_server . '/@vite/client"></script>';

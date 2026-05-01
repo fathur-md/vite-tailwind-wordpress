@@ -1,7 +1,7 @@
 <header class="site-header top-0 z-50 w-full bg-base-2/50 dark:bg-base-black/50 backdrop-blur-lg">
     <nav class="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-2">
         <a href="<?php echo home_url('/') ?>" class="text-xl font-semibold tracking-tightest text-contrast-2 dark:text-accent-3 transition-opacity hover:opacity-80">
-            <?php bloginfo('name') ?><span class="bord text-2xl font-bold text-notices-2">.</span>
+            Fathur<span class="bord text-2xl font-bold text-notices-2">.</span>
         </a>
         <div class="hidden md:flex items-center justify-center gap-10 text-sm dark:text-accent-3">
             <?php

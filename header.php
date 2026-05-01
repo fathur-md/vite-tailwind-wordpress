@@ -9,5 +9,13 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('font-sans antialiased min-h-screen flex flex-col selection:text-accent-2 selection:bg-none relative'); ?>>
-    <?php get_template_part('template-parts/header/navbar') ?>
+<body <?php body_class('font-sans antialiased flex flex-col selection:text-accent-2 selection:bg-none'); ?>>
+    <?php wp_body_open(); ?>
+
+    <?php
+    // Default
+    // get_template_part('template-parts/header/navbar');
+
+    // Custom
+    get_template_part('template-parts/header/navbar-custom');
+    ?>

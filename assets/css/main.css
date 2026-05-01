@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @theme {
+  /* Custom Fonts */
   --font-sans:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -35,56 +36,54 @@
   /* Letter Spacing */
   --tracking-tightest: -0.04em;
   --tracking-tighter: -0.02em;
-}
 
+  /* Linear Gradients */
+  --background-image-glow: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  --background-image-gradient-silver: linear-gradient(90deg, #fff, #86868b);
+  --background-image-gradient-blue: linear-gradient(
+    135deg,
+    #0071e3 0%,
+    #42a5f5 100%
+  );
+}
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-base-2 text-base-dark dark:bg-base-black dark:text-accent-3;
+    @apply bg-base-light text-base-dark dark:bg-base-black dark:text-base-light;
   }
-  .glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(
-      circle,
-      rgba(255, 255, 255, 0.03) 0%,
-      rgba(255, 255, 255, 0) 70%
-    );
-    z-index: -1;
-    pointer-events: none;
+  body.admin-bar .site-header {
+    position: fixed;
+    top: 32px !important;
   }
-  .gradient-text {
-    background: linear-gradient(90deg, #fff, #86868b);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: default;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  @media (max-width: 782px) {
+    body.admin-bar .site-header {
+      top: 46px !important;
+    }
   }
-
-  .gradient-text--blue {
-    background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  @media (max-width: 600px) {
+    body.admin-bar .site-header {
+      position: sticky;
+      top: 0 !important;
+    }
+  }
+  li {
+    @apply list-none;
+  }
+  a {
+    text-decoration: none;
   }
 }
 
-@import "tailwindcss";
-
-/* Custom utility untuk menebalkan font secara natural */
 @utility text-shadow-bold {
   text-shadow:
-    1px 1px 0 currentColor,
-    -1px -1px 0 currentColor,
-    1px -1px 0 currentColor,
-    -1px 1px 0 currentColor;
+    0.5px 0.5px 0 currentColor,
+    -0.5px -0.5px 0 currentColor,
+    0.5px -0.5px 0 currentColor,
+    -0.5px 0.5px 0 currentColor;
 }
