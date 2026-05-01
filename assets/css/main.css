@@ -57,8 +57,11 @@
   body {
     @apply bg-base-light text-base-dark dark:bg-base-black dark:text-base-light;
   }
+  .site-header {
+    @apply fixed;
+  }
   body.admin-bar .site-header {
-    position: fixed;
+    position: fixed !important;
     top: 32px !important;
   }
   @media (max-width: 782px) {
@@ -68,7 +71,7 @@
   }
   @media (max-width: 600px) {
     body.admin-bar .site-header {
-      position: sticky;
+      position: sticky !important;
       top: 0 !important;
     }
   }
