@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-round: "Quicksand", sans-serif;
+
+  /* Custom Colors */
+  --color-base-black: #0b0b0c;
+  --color-base-dark: #1d1d1f;
+  --color-base-gray: #86868b;
+  --color-base-light: #f5f5f7;
+  --color-base-blue: #2997ff;
+
+  --color-base-1: #ffffff;
+  --color-base-2: #f5f5f5;
+
+  --color-accent-1: #0066cc;
+  --color-accent-2: #0055aa;
+  --color-accent-3: #e5e5ea;
+
+  --color-contrast-1: #1d1d1f;
+  --color-contrast-2: #3e3e3e;
+  --color-contrast-3: #424245;
+  --color-contrast-4: #86868b;
+
+  --color-notices-1: #13612e;
+  --color-notices-2: #1159af;
+  --color-notices-3: #b82105;
+  --color-notices-4: #f7630c;
+  --color-notices-5: #f5a524;
+
+  /* Letter Spacing */
+  --tracking-tightest: -0.04em;
+  --tracking-tighter: -0.02em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-base-2 text-base-dark dark:bg-base-black dark:text-accent-3;
+  }
+  .glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    z-index: -1;
+    pointer-events: none;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #fff, #86868b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .gradient-text--blue {
+    background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@import "tailwindcss";
+
+/* Custom utility untuk menebalkan font secara natural */
+@utility text-shadow-bold {
+  text-shadow:
+    1px 1px 0 currentColor,
+    -1px -1px 0 currentColor,
+    1px -1px 0 currentColor,
+    -1px 1px 0 currentColor;
+}
