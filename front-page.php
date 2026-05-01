@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main>
+<main class="grow">
     <?php
     // Default
     // <?php get_template_part('template-parts/sections/hero');

@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('font-sans antialiased flex flex-col selection:text-accent-2 selection:bg-none'); ?>>
+<body <?php body_class('font-sans antialiased flex flex-col selection:text-accent-2 selection:bg-none min-h-screen'); ?>>
     <?php wp_body_open(); ?>
 
     <?php
