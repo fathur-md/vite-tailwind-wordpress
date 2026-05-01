@@ -4,6 +4,8 @@ This repository is primarily my personal documentation and learning log for buil
 
 Currently, this project is a work in progress. Implemented features include a **navbar**, **hero section (front page)**, and a main styling system supporting **backgrounds**, **dark mode**, and **light mode**. The theme has been successfully deployed and runs well for my use case.
 
+**Live demo:** [https://vite-wp-test.free.nf/](https://vite-wp-test.free.nf/)
+
 > Note: This project is part of my learning journey, referencing various open-source resources and with help from AI. Feedback, suggestions, and contributions from more experienced developers are very welcome via issues or pull requests.
 
 ## Features
