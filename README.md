@@ -101,7 +101,6 @@ Feel free to open:
 - Issues
 - Pull Requests
 - Technical Discussions
-- Technical Discussions
 
 ## License
 
