@@ -1,10 +1,10 @@
-<section id="featured" class="py-24 px-5 bg-white dark:bg-[#161618] flex flex-col animate-fade-in">
+<section id="featured" class="py-24 px-5 bg-white dark:bg-base-4 flex flex-col">
     <div class="max-w-5xl mx-auto flex flex-col w-full">
         <div>
             <span class="text-sm md:text-xl font-medium text-gray-500 uppercase -tracking-tighter mb-1 block">
                 Featured
             </span>
-            <h2 class="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight">
+            <h2 class="text-3xl sm:text-3xl md:text-5xl font-semibold tracking-tight">
                 Innovation in practice.
             </h2>
         </div>
@@ -18,7 +18,7 @@
                 </div>
                 <img
                     src="<?php echo get_img_url(30, 'full'); ?>" alt="hoaxai"
-                    class="block">
+                    class="block dark:brightness-80">
             </div>
         </div>
 
@@ -26,14 +26,14 @@
     </div>
 </section>
 
-<section class="bg-white flex flex-col pb-4">
+<section class="bg-white dark:bg-base-black flex flex-col pb-4">
     <!-- Mockup -->
-    <div class="bg-base-3 max-w-432 max-[1728px]:rounded-none mx-auto rounded-4xl overflow-hidden relative w-full">
+    <div class="bg-base-3 max-w-432 max-[1728px]:rounded-none mx-auto rounded-4xl overflow-hidden relative w-full dark:brightness-80">
         <div class="flex flex-col pt-20 min-[1200px]:pb-170 justify-center items-center relative z-10">
-            <h1 class="text-center text-3xl sm:text-5xl font-semibold">
+            <h1 class="text-center text-3xl sm:text-5xl font-semibold text-base-dark">
                 Design with Intent. Nothing More.
             </h1>
-            <p class="text-xl mt-8 max-w-3xl mx-auto text-center font-medium sm:font-medium pb-8 px-5">
+            <p class="text-xl mt-8 max-w-3xl mx-auto text-center font-medium sm:font-medium pb-8 px-5 text-base-gray">
                 Stripping away the noise to focus on what truly matters: the truth.
             </p>
         </div>
@@ -44,15 +44,15 @@
             class="relative min-[1200px]:absolute max-w-5xl bottom-0 left-0 z-10 w-full">
 
         <img
-            src="<?php echo get_img_url(34, 'full') ?>"
+            src="<?php echo get_img_url(37, 'full') ?>"
             alt="hoaxai mobile"
             class="absolute max-w-100 bottom-0 right-0 hidden min-[1200px]:block">
     </div>
 
     <div class="px-4 mt-4">
-        <div class="bg-base-3 mx-auto py-12 w-full flex flex-col rounded-md">
+        <div class="bg-base-3  dark:bg-base-4 dark:inset-shadow-sm dark:inset-shadow-base-black mx-auto py-12 w-full flex flex-col rounded-md">
             <h1 class="text-center text-4xl md:text-5xl font-bold text-accent-1 px-5">Hoax Detect AI</h1>
-            <p class="text-base md:text-xl mt-4 max-w-3xl mx-auto text-center font-medium sm:font-medium pb-8 px-5">
+            <p class="text-base dark:text-base-light/60 md:text-xl mt-4 max-w-3xl mx-auto text-center font-medium sm:font-medium pb-8 px-5">
                 A sophisticated SaaS-based fake news detection platform. Built as a prototype to empower digital literacy by verifying article authenticity in real-time.
             </p>
 
