@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import "tailwindcss";
 
 @theme {
   /* Custom Fonts */
   --font-sans:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-round: "Quicksand", sans-serif;
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter",
+    system-ui, sans-serif;
 
   /* Custom Colors */
   --color-base-black: #0b0b0c;
@@ -49,6 +49,33 @@
     #0071e3 0%,
     #42a5f5 100%
   );
+
+  /* Animations */
+  --ease-normal: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-fade-up: fadeUp 0.7s var(--ease-normal) both;
+  --animate-fade-in: fadeIn 0.7s ease-in both;
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 @layer base {
   html {
@@ -80,13 +107,18 @@
   }
   a {
     text-decoration: none;
+    cursor: pointer;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }
 
-@utility text-shadow-bold {
-  text-shadow:
-    0.5px 0.5px 0 currentColor,
-    -0.5px -0.5px 0 currentColor,
-    0.5px -0.5px 0 currentColor,
-    -0.5px 0.5px 0 currentColor;
+@layer components {
+  .current-menu-item > a {
+    @apply text-neutral-900 dark:text-white font-medium;
+  }
+  .menu-item {
+    @apply text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-300;
+  }
 }

@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <!-- Wrapper utama dengan styling minimalis -->
-<main class="max-w-3xl mx-auto px-4 py-12 md:py-20 grow">
+<main class="max-w-3xl mx-auto px-4 py-12 md:py-20 grow animate-fade-in [animation-duration:300ms]">
 
     <?php
     // Memulai WordPress Loop

@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory() . '/includes/vite.php';
+require get_template_directory() . '/includes/helpers.php';
 
 function fathur_studio_register_menus()
 {
